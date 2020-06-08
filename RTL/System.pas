@@ -37,12 +37,17 @@ type
 
   PInitContext = ^TInitContext;
   TInitContext = record
-    OuterContext: PInitContext;
-    ExceptionFrame, InitTable, InitCount: Integer;
-    Module: Pointer;
-    DLLSaveEBP, DLLSaveEBX, DLLSaveESI, DLLSaveEDI: Pointer;
+    OuterContext:   PInitContext;
+    ExcFrame:       Pointer;
+    InitTable:      PackageInfo;
+    InitCount:      Integer;
+    Module:         Pointer;
+    DLLSaveEBP:     Pointer;
+    DLLSaveEBX:     Pointer;
+    DLLSaveESI:     Pointer;
+    DLLSaveEDI:     Pointer;
     ExitProcessTLS: procedure;
-    DLLInitState: byte;
+    DLLInitState:   Byte;
   end;
 
 var
