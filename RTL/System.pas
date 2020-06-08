@@ -45,6 +45,9 @@ type
     DLLInitState: byte;
   end;
 
+var
+  IsConsole: Boolean;       { True if compiled as console app }
+
 procedure _Halt0;
 procedure _HandleFinally;
 procedure _StartExe(InitTable: PackageInfo);
