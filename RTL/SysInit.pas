@@ -6,7 +6,7 @@ unit SysInit;
 
 interface
 
-procedure _InitExe;
+procedure _InitExe(InitTable: Pointer);
 procedure _Halt0;
 procedure _InitLib(Context: PInitContext);
 
@@ -24,7 +24,7 @@ procedure _InitLib(context: pinitcontext);
 asm
 end;
 
-procedure _InitExe;
+procedure _InitExe(InitTable: Pointer);
 begin
   _StartExe(InitTable);
 end;
