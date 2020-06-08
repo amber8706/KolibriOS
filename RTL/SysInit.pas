@@ -25,7 +25,8 @@ asm
 end;
 
 procedure _InitExe;
-asm
+begin
+  _StartExe(InitTable);
 end;
 
 procedure _Halt0;
